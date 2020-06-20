@@ -68,14 +68,16 @@ def Img_Visualization():
     #Set the way images are appearing the matplotlib
     f, ax = plt.subplots(2,5)
     f.set_size_inches(10, 10)
-    k = 0
+    k = 90 #this number tells you the starting point of  your images
 
     # iterate through the images to be printed
     for i in range(2):
         for j in range(5):
             ax[i, j].imshow(x_train[k].reshape(28, 28), cmap="gray")
             k += 1
-#Let's do some data augumentation
+    plt.show()
+#if you want to visualize your images call this function
+#Img_Visualization()
 
 def CNN():
     # Instantiating a small convet for dogs vs. cats classification
