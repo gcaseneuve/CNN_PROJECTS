@@ -1,3 +1,9 @@
+''':cvar
+Name : Guy Marvens Caseneuve
+School: University of Massachusetts Dartmouth
+Date: June 20th 2020
+Contact: gmcaseneuve@gmail.com
+'''
 import numpy as np
 import os
 import shutil
@@ -69,7 +75,6 @@ This function check if Train_Tst_Datasets directory exist , and if it exists, it
 folder(s) was there and create it properly.
 '''
 if os.path.exists(Working_Dir):
-    print("if")
     count =0
     for file in os.listdir('/Users/cf4ur/Documents/Research_Folder/Intel_Image_Classification/Train_Tst_Datasets'):
         if file == '.DS_Store':
@@ -137,8 +142,8 @@ def model_history(epoch, history):
     test_loss = history['val_loss']
 
     fig.set_size_inches(20,10)
-    ax[0].plot(epochs , train_loss , 'go-' , label = 'Training Loss')
-    ax[0].plot(epochs , test_loss , 'ro-' , label = 'Validation Loss')
+    ax[0].plot(epochs , train_loss , 'ro-' , label = 'Training Loss')
+    ax[0].plot(epochs , test_loss , 'go-' , label = 'Validation Loss')
     ax[0].set_title('Model Loss')
     ax[0].legend()
     ax[0].set_xlabel("Epochs")
@@ -148,12 +153,12 @@ def model_history(epoch, history):
     test_acc = history['val_accuracy']
     #test_loss = history['val_loss']
 
-    ax[1].plot(epochs , train_acc , 'g-o' , label = 'Training Accuracy')
-    ax[1].plot(epochs , test_acc , 'r-o' , label = 'Testing Accuracy')
+    ax[1].plot(epochs , train_acc , 'r-o' , label = 'Training Accuracy')
+    ax[1].plot(epochs , test_acc , 'g-o' , label = 'Testing Accuracy')
     ax[1].set_title('Model Accuracy')
     ax[1].legend()
     ax[1].set_xlabel("Epochs")
-    ax[1].set_ylabel("Training and Validation Accuracy")
+    ax[1].set_ylabel("Training & Validation Accuracy")
     plt.show()
 
 
